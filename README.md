@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+12/31/2018
 
 ### Project Title
-Replace the Project Title
+bikeshare
 
 ### Description
-Describe what your project is about and what it does
+Project provides user with time_stats, station_stats, trip_duration_stats, user_stats, and display_data based on user's input.
 
 ### Files used
-Include the files used
+Pyhon file is bikeshare.py.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+This project was initiated as a requirement for completing the Udacity Programming for Data Science course
