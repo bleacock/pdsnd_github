@@ -8,7 +8,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user to provide a city, month, and day to analyze.
 
     Returns:
         (str) city - name of the city to analyze
@@ -56,7 +56,7 @@ def get_filters():
 
 def load_data(city, month, day):
     """
-    Loads data for the specified city and filters by month and day if applicable.
+    Loads data for the provided city and filters by month and day if applicable.
 
     Args:
         (str) city - name of the city to analyze
@@ -65,7 +65,7 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
-    
+
     df = pd.read_csv(CITY_DATA[city])
     # load data file into a dataframe
 
@@ -99,7 +99,7 @@ def time_stats(df):
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
-    
+
     popular_month = df.loc[:,"month"].mode()[0]
     print('most common month is: ', popular_month)
     # display the most common month
@@ -187,19 +187,19 @@ def user_stats(df):
         print("No Birth exist!")
 
 
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 def display_data(df):
     """Displays lines of raw input."""
-    
+
     print('\nDisplaying five lines of raw input...\n')
     start_time = time.time()
-    
+
     start = 0
     stop = 5
-    
+
     while True:
         show_records = input('\nWould you like to see five lines of raw input? Enter yes or no.\n')
         if show_records.lower() != 'yes':
@@ -211,7 +211,7 @@ def display_data(df):
             stop += 5
         # Displays lines of raw input in increments of five
 
-   
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -222,11 +222,11 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         display_data(df)
-        
-        
-        
-        
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+
+
+
+
+        restart = input('\nWould you like to restart? Please enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
